@@ -1,0 +1,6 @@
+# Copy to android/key.properties and fill before Play Store release builds.
+# Never commit key.properties or your .jks keystore to git.
+storePassword=your-keystore-password
+keyPassword=your-key-password
+keyAlias=zerotrace
+storeFile=../keystore/zerotrace-release.jks

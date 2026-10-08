@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "algorithm": "ed25519",
+  "publisherKeyId": "zerotrace-publisher-v1",
+  "publicKeyHex": "e27c80ac7abf056d2dfa9f5a69d5566b65bc405963c005fd5d44d244e490f9a0",
+  "packs": [
+    {
+      "packId": "face-protection",
+      "version": "1.0.0",
+      "sha256": "10236d3e428daac1c05824d20276bd9918fabbd06d448f875466da2dfb4f61ec",
+      "signature": "ed25519:e4ac78c12d628a8587e8a937851835e99a1527343574c5be22a99aa69a04580b7242cb0e038eacda73008f25a66d71003d1032687c0fd7d6ecbb34588f6fb20a"
+    },
+    {
+      "packId": "vehicle-protection",
+      "version": "1.0.0",
+      "sha256": "9fd965dcf32203ec1539b25eefbef4a94ef2c603635afd1b7198c32fa40f9b3e",
+      "signature": "ed25519:475cd86bec2e381ccd0ca8bceac51fd99743d19216031d9443dc87eadec4ac5ceb8d543a27ece71329c5b77eb393656e48fb1038666b3c8918eed50e6c3c7300"
+    },
+    {
+      "packId": "document-protection",
+      "version": "1.0.0",
+      "sha256": "c78ede6c6cf2a9ea8baa52f424f4e7c677703b103a4568bf74c7bf08dcbbb528",
+      "signature": "ed25519:66dcc3c5831ebfee2c3a26a900607654731786dcbc5da67f809ee03bce1c963292f76b71792f64a0e8569d63cad2fcf46fd9a0b2a1c845a6c8b5ac6ee3eb5809"
+    }
+  ],
+  "catalogSha256": "a462aef652dc507af8fc1f014e4bd9d7e4928fd771cf4092e2cae9ad18a0cccd"
+}

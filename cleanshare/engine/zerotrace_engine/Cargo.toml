@@ -1,0 +1,30 @@
+[package]
+name = "zerotrace_engine"
+version = "0.1.0"
+edition = "2021"
+description = "ZeroTrace offline scanner engine — metadata, secrets, ONNX inference"
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+regex = "1"
+ort = { version = "2.0.0-rc.12", optional = true, default-features = false, features = ["download-binaries", "ndarray", "tls-native-vendored", "std"] }
+ndarray = { version = "0.17", optional = true, features = ["std"] }
+image = { version = "0.25", optional = true, default-features = false, features = ["jpeg", "png"] }
+
+[features]
+default = ["onnx"]
+onnx = ["dep:ort", "dep:ndarray", "dep:image"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = "z"
+# Strip symbol/debug tables so names/paths don't ship in the release .so.
+# Path remapping is done via RUSTFLAGS (--remap-path-prefix) in
+# tool/build_engine_android.ps1 since `trim-paths` isn't stable in this toolchain.
+strip = true

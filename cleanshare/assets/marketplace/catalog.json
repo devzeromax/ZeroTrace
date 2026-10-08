@@ -1,0 +1,247 @@
+{
+  "version": 3,
+  "updatedAt": "2026-06-18T12:00:00Z",
+  "packs": [
+    {
+      "id": "privacy-essentials",
+      "name": "Privacy Essentials Pack",
+      "description": "Core scanners built into ZeroTrace: EXIF metadata, GPS detection, and privacy reporting. No download required.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "metadata_scanner",
+      "sizeBytes": 0,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/metadata-cleaner.png",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios",
+          "web"
+        ]
+      },
+      "builtin": true,
+      "capabilities": [
+        "metadata",
+        "hash",
+        "privacy_report"
+      ],
+      "manifest": {
+        "format": "builtin",
+        "pluginId": "privacy-essentials"
+      }
+    },
+    {
+      "id": "metadata-cleaner",
+      "name": "Metadata Cleaner Pack",
+      "description": "PDF, Office, and ZIP metadata detection. Lightweight rules engine — runs locally, no neural model download.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "metadata_scanner",
+      "sizeBytes": 8192,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/metadata-cleaner.png",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios",
+          "web"
+        ]
+      },
+      "builtin": true,
+      "capabilities": [
+        "metadata_advanced"
+      ],
+      "manifest": {
+        "format": "rules",
+        "pluginId": "metadata-cleaner",
+        "modelFile": "rules/metadata-rules.json"
+      }
+    },
+    {
+      "id": "developer-protection",
+      "name": "Developer Protection Pack",
+      "description": "API keys, tokens, and secret pattern detection for code and config files. Lightweight — no MB model needed.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "developer_tools",
+      "sizeBytes": 6144,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/developer-protection.png",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios",
+          "web"
+        ]
+      },
+      "builtin": true,
+      "capabilities": [
+        "secrets"
+      ],
+      "manifest": {
+        "format": "rules",
+        "pluginId": "developer-protection",
+        "modelFile": "rules/secrets-rules.json"
+      }
+    },
+    {
+      "id": "qr-protection",
+      "name": "QR Protection Pack",
+      "description": "QR and barcode reading for sensitive URLs and tokens. Built into ZeroTrace via ZXing — no pack download required.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "qr_detection",
+      "sizeBytes": 0,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/qr-protection.png",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios",
+          "web"
+        ]
+      },
+      "builtin": true,
+      "capabilities": [
+        "qr_codes"
+      ],
+      "manifest": {
+        "format": "builtin",
+        "pluginId": "qr-protection"
+      }
+    },
+    {
+      "id": "face-protection",
+      "name": "Face Protection Pack",
+      "description": "Detect faces at more angles and sizes. Enable blur before sharing photos.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "face_detection",
+      "sizeBytes": 3520127,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/face-protection.png",
+      "bundleAsset": "assets/marketplace/packs/face-protection.zip",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios"
+        ]
+      },
+      "builtin": false,
+      "capabilities": [
+        "faces",
+        "scrfd",
+        "ensemble"
+      ],
+      "manifest": {
+        "format": "onnx",
+        "pluginId": "face-protection",
+        "modelFile": "models/yunet.onnx",
+        "sha256": "10236d3e428daac1c05824d20276bd9918fabbd06d448f875466da2dfb4f61ec",
+        "downloadUrl": "https://releases.zerotrace.app/packs/face-protection/1.0.0/pack.zip",
+        "signature": "ed25519:e4ac78c12d628a8587e8a937851835e99a1527343574c5be22a99aa69a04580b7242cb0e038eacda73008f25a66d71003d1032687c0fd7d6ecbb34588f6fb20a"
+      }
+    },
+    {
+      "id": "vehicle-protection",
+      "name": "Vehicle Protection Pack",
+      "description": "Find license plates and vehicle regions in photos. Ideal for street and parking images.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "license_plate_detection",
+      "sizeBytes": 37191618,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/vehicle-protection.png",
+      "bundleAsset": "assets/marketplace/packs/vehicle-protection.zip",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios"
+        ]
+      },
+      "builtin": false,
+      "capabilities": [
+        "license_plates",
+        "vehicles"
+      ],
+      "manifest": {
+        "format": "onnx",
+        "pluginId": "vehicle-protection",
+        "modelFile": "models/yolov11n.onnx",
+        "sha256": "9fd965dcf32203ec1539b25eefbef4a94ef2c603635afd1b7198c32fa40f9b3e",
+        "downloadUrl": "https://releases.zerotrace.app/packs/vehicle-protection/1.0.0/pack.zip",
+        "signature": "ed25519:475cd86bec2e381ccd0ca8bceac51fd99743d19216031d9443dc87eadec4ac5ceb8d543a27ece71329c5b77eb393656e48fb1038666b3c8918eed50e6c3c7300"
+      }
+    },
+    {
+      "id": "document-protection",
+      "name": "Document Protection Pack",
+      "description": "OCR for document images (PaddleOCR) plus PDF text-layer PII scan. Pair with Deep AI scan on photos.",
+      "version": "1.0.0",
+      "developer": "ZeroTrace",
+      "category": "document_scanner",
+      "sizeBytes": 17823187,
+      "downloadCount": 0,
+      "license": "MIT",
+      "iconAsset": "assets/marketplace/packs/document-protection.png",
+      "bundleAsset": "assets/marketplace/packs/document-protection.zip",
+      "compatibility": {
+        "minAppVersion": "1.0.0",
+        "platforms": [
+          "windows",
+          "macos",
+          "linux",
+          "android",
+          "ios"
+        ]
+      },
+      "builtin": false,
+      "capabilities": [
+        "ocr",
+        "documents",
+        "pii",
+        "recognition"
+      ],
+      "manifest": {
+        "format": "onnx",
+        "pluginId": "document-protection",
+        "modelFile": "models/paddleocr.onnx",
+        "sha256": "c78ede6c6cf2a9ea8baa52f424f4e7c677703b103a4568bf74c7bf08dcbbb528",
+        "downloadUrl": "https://releases.zerotrace.app/packs/document-protection/1.0.0/pack.zip",
+        "signature": "ed25519:66dcc3c5831ebfee2c3a26a900607654731786dcbc5da67f809ee03bce1c963292f76b71792f64a0e8569d63cad2fcf46fd9a0b2a1c845a6c8b5ac6ee3eb5809"
+      }
+    }
+  ],
+  "publisherKeyId": "zerotrace-publisher-v1",
+  "signedAt": "2026-10-08T11:51:07.790513Z"
+}

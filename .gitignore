@@ -1,0 +1,62 @@
+# Cursor / agent tooling (not product source)
+.agents/
+.cursor/
+skills-lock.json/
+_release_stage/
+
+# Pitch decks (optional local only)
+*.pptx
+
+# Secrets & signing
+**/*.jks
+**/*.keystore
+**/tool/keys/
+**/*.pem
+**/.env
+**/*.env
+
+# Flutter / Dart
+**/.dart_tool/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/build/
+**/.pub-cache/
+**/pubspec.lock
+
+# Native engine build output
+**/engine/**/target/
+**/android/.gradle/
+**/android/local.properties
+**/android/app/src/main/jniLibs/
+**/ios/Pods/
+**/ios/.symlinks/
+**/macos/Flutter/ephemeral/
+**/linux/flutter/ephemeral/
+**/windows/flutter/ephemeral/
+
+# IDE / OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Large local model scratch (packs live under assets when bundled)
+**/tool/models/_*.onnx
+**/*.pdb
+**/*.ilk
+
+# Binary releases live on GitHub Releases, not in git
+cleanshare/releases/public/
+**/ZeroTrace*.apk
+**/ZeroTrace-Windows.zip
+_release_stage/
+
+
+# Crash / local diag logs
+**/hs_err_*.log
+**/replay_*.log
+**/run_diag.log
+
